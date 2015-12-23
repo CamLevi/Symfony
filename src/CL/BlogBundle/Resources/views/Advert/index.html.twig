@@ -1,0 +1,27 @@
+
+
+{% extends "CLBlogBundle::layout.html.twig" %}
+
+{% block title %}
+	Accueil - {{ parent() }}
+{% endblock %}
+
+{% block clblog_body %}
+	<h2>Liste des articles</h2>
+	
+	<ul>
+		{% for advert in listAdverts %}
+		<li>
+		
+			<a href="{{ path('cl_blog_view',{'id': advert.id}) }}">
+				{{ advert.title }}
+			</a>
+			par {{ advert.author }},
+			le {{ advert.date|date('d/m/Y')}}
+		</li>
+		
+		{% else %}
+		<li>Pas encore d'articles</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

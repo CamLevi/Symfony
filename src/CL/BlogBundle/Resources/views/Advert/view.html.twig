@@ -1,0 +1,38 @@
+{% extends "CLBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  Lecture d'un article - {{ parent() }}
+{% endblock %}
+
+{% block clblog_body %}
+ 
+  <h2>{{ advert.title }}</h2>
+  <i>Par {{ advert.author }}, le {{ advert.date|date('d/m/Y') }}</i>
+	
+  
+  <div class="well">
+   {% if advert.image is not null %}
+<img height='330' width='400' src="{{ advert.image.url }}" alt="{{ advert.image.alt }}">
+{% endif %}
+<br>
+<br>
+    {{ advert.content }}
+  </div>
+  
+
+  <p>
+    <a href="{{ path('cl_blog_home') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à la liste
+    </a>
+    <a href="{{ path('cl_blog_edit', {'id': advert.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-edit"></i>
+      Modifier l'article
+    </a>
+    <a href="{{ path('cl_blog_delete', {'id': advert.id}) }}" class="btn btn-danger">
+      <i class="glyphicon glyphicon-trash"></i>
+      Supprimer l'article
+    </a>
+  </p>
+
+{% endblock %}

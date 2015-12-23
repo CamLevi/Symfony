@@ -1,0 +1,4 @@
+cl_blog:
+    resource: "@CLBlogBundle/Resources/config/routing.yml"
+    prefix:   /blog
+

@@ -1,0 +1,8 @@
+6bc751,127.0.0.1,GET,http://localhost/Symfony/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DCLBlogBundle%253AAdvert%253Amenu,1450873519,69a392,200
+69a392,::1,GET,http://localhost/Symfony/web/app_dev.php/blog,1450873519,,200
+10ddf4,127.0.0.1,GET,http://localhost/Symfony/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DCLBlogBundle%253AAdvert%253Amenu,1450883058,e0d1af,200
+e0d1af,::1,GET,http://localhost/Symfony/web/app_dev.php/blog,1450883058,,200
+fe356d,127.0.0.1,GET,http://localhost/Symfony/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DCLBlogBundle%253AAdvert%253Amenu,1450883060,bf066c,200
+bf066c,::1,GET,http://localhost/Symfony/web/app_dev.php/blog/advert/18,1450883060,,200
+851c76,127.0.0.1,GET,http://localhost/Symfony/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DCLBlogBundle%253AAdvert%253Amenu,1450883081,cb4bcc,200
+cb4bcc,::1,GET,http://localhost/Symfony/web/app_dev.php/blog/edit/18,1450883081,,200

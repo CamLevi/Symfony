@@ -1,0 +1,52 @@
+{% extends "CLBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  Modifier un article - {{ parent() }}
+{% endblock %}
+
+{% block clblog_body %}
+
+  <h2>Modifier un article</h2>
+
+    <form method="post" action="{{ path('cl_blog_edit',{id: advert.id}) }}">
+ 
+   <fieldset>
+       <legend>Votre article</legend> 
+	  
+       <label for="title">Titre</label>
+       <input type="text" name="title" id="title" required value="{{ advert.title }}" />
+		<br>
+		<br>
+       <label for="author">Auteur</label>
+       <input type="text" name="author" id="author" required value="{{ advert.author }}" />
+		<br>
+		<br>
+		<label for="content">Contenu</label>
+		<textarea type="text" name="content" id="content" required >{{ advert.content }} </textarea>
+		<br>
+		<br>
+		<label for="url">Url de l'image</label>
+		<input type=text name="url" id="url" required  />
+		<br>
+		<br>
+		<label for="alt">Alt de l'image</label>
+		<input type=text name="alt" id="alt"  />
+		<br>
+		<br>
+		<input type="submit" value="Valider" />
+	</fieldset>
+</form>
+
+  <p>
+    Vous éditez un article déjà existant, merci de ne pas changer
+    le thème général de l'article déjà publié.
+  </p>
+
+  <p>
+    <a href="{{ path('cl_blog_view', {'id': advert.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à l'article
+    </a>
+  </p>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{# src/OC/PlatformBundle/Resources/views/Advert/form.html.twig #}
+
+{# Cette vue n'hérite de personne, elle sera incluse par d'autres vues qui,
+   elles, hériteront probablement du layout. Je dis « probablement » car,
+   ici pour cette vue, on n'en sait rien et c'est une info qui ne nous concerne pas. #}
+
+<h3>Formulaire d'article</h3>
+
+<div class="well">
+  <form method="post" action="{{ path('cl_blog_add') }}">
+ 
+   <fieldset>
+       <legend>Votre article</legend> 
+	  
+       <label for="title">Titre</label>
+       <input type="text" name="title" id="title" required />
+		<br>
+		<br>
+       <label for="author">Auteur</label>
+       <input type="text" name="author" id="author" required />
+		<br>
+		<br>
+		<label for="content">Contenu</label>
+		<textarea type="text" name="content" id="content" required> </textarea>
+		<br>
+		<br>
+		<label for="url">Url de l'image</label>
+		<input type=text name="url" id="url" required />
+		<br>
+		<br>
+		<label for="alt">Alt de l'image</label>
+		<input type=text name="alt" id="alt" />
+		<br>
+		<br>
+		<input type="submit" value="Valider" />
+	</fieldset>
+</form>
+</div>

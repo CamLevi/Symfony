@@ -1,0 +1,29 @@
+# mettre 4 espaces pour indenter pour tous les fichier en yml
+
+cl_blog_home:
+    path:      /{page}
+    defaults:  { _controller: CLBlogBundle:Advert:index, page: 1 }
+    requirements: 
+        page: \d*
+    
+cl_blog_view: #page des "annonces" du blog
+    path:      /advert/{id}
+    defaults:  { _controller: CLBlogBundle:Advert:view }
+    requirements:
+        id: \d+
+    
+cl_blog_add: #page ajout d'une "annonce"
+    path:      /add
+    defaults:  { _controller: CLBlogBundle:Advert:add }
+
+cl_blog_edit: #page modifier une "annonce"
+    path:   /edit/{id}
+    defaults: {_controller: CLBlogBundle:Advert:edit }
+    requirements: 
+        id: \d+
+
+cl_blog_delete: #supprimer une "annonce"
+    path:   /delete/{id}
+    defaults: {_controller CLBlogBundle:Advert:delete }
+    requirements:
+        id: \d+

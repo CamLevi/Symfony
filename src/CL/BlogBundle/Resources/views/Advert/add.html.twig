@@ -1,0 +1,25 @@
+{% extends "CLBlogBundle::layout.html.twig" %}
+
+{%block title %}
+	Ajouter un article - {{ parent() }}
+{% endblock %}
+
+{% block clblog_body %}
+
+  <h2>Ajouter un article</h2>
+
+  {{ include("CLBlogBundle:Advert:form.html.twig") }}
+
+  <p>
+    Attention : cette article sera ajouté directement
+    sur la page d'accueil après validation du formulaire.
+  </p>
+  
+  <p>
+	<a href="{{ path('cl_blog_home') }}" class="btn btn-default">
+		<i class="glyphicon glyphicon-chevron-left"></i>
+		Retour à la page d'accueil
+	</a>
+  </p>
+
+{% endblock %}

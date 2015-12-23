@@ -1,0 +1,25 @@
+{% extends "CLBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  Supprimer un article - {{ parent() }}
+{% endblock %}
+
+{% block clblog_body %}
+
+  <h2>Supprimer un article</h2>
+
+  <p>
+    Attention, si vous validez cette étape, l'article sera définitivement supprimé.
+  </p>
+  
+    {# On met l'id de l'annonce dans la route de l'action du formulaire #}
+  <form action="{{ path('cl_blog_delete', {'id': advert.id}) }}" method="post">
+    <a href="{{ path('cl_blog_view', {'id': advert.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à l'article
+    </a>
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+  </form>
+
+
+{% endblock %}
